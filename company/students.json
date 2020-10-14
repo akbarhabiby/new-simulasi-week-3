@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Abrar Na'im",
+    "phase": 1,
+    "likeMcd": true
+  },
+  {
+    "name": "Bima Krishna",
+    "phase": 1,
+    "likeMcd": true
+  },
+  {
+    "name": "Farhan Haryawan",
+    "phase": 3,
+    "likeMcd": false
+  },
+  {
+    "name": "Febrian Aditya Ramadhan",
+    "phase": 2,
+    "likeMcd": false
+  },
+  {
+    "name": "Jeplind Morico",
+    "phase": 1,
+    "likeMcd": true
+  },
+  {
+    "name": "Mohammad Fitrah Ramadhan Lamusu",
+    "phase": 2,
+    "likeMcd": false
+  },
+  {
+    "name": "Muhammad Akbar Habiby Khalid",
+    "phase": 2,
+    "likeMcd": true
+  },
+  {
+    "name": "Torian Yap",
+    "phase": 3,
+    "likeMcd": true
+  },
+  {
+    "name": "Yopi Kurniawan Prabowo",
+    "phase": 1,
+    "likeMcd": false
+  }
+]
