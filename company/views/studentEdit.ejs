@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Student</title>
+</head>
+<body>
+    <h1>Edit Student</h1>
+    <% if (error) { %>
+        <p>Error!: <%= error %> </p>
+    <% } %> 
+    <a href="/students">Back to list Student</a>
+    <form action="/students/edit/<%= data.id %> " method="post">
+        <label for="">Name:</label><br>
+        <input type="text" name="name" value="<%= data.name %>">
+        <br>
+        <label for="">Phase:</label><br>
+        <input type="number" name="phase" value="<%= data.phase %>">
+        <br>
+        <label for="">Like Mcd?</label><br>
+        <% if (data.likeMcd === true) { %>
+            <select name="likeMcd">
+                <option value="">-- Please Select --</option>
+                <option value="true" selected>True</option>
+                <option value="false">False</option>
+            </select>
+        <% } else { %> 
+            <select name="likeMcd">
+                <option value="">-- Please Select --</option>
+                <option value="true">True</option>
+                <option value="false" selected>False</option>
+            </select>
+        <% } %> 
+        <br>
+        <button type="submit">Create Student</button>
+    </form>
+</body>
+</html>
