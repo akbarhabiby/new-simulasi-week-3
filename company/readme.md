@@ -61,11 +61,22 @@ Untuk bagian `Like MCD` menggunakan select input yang terdapat 3 pilihan:
 
 ![add](./assets/select-option.png "add")
 
-Jangan lupa untuk add dan edit harus memiliki validasi untuk add
-
 Apabila berhasil menambahkan student maka halaman akan redirect ke home atau `/`
 
 ## Release 5
+### Halaman Edit Student atau Route `/students/edit/:id`
+Halaman Edit akan menampilkan form yang telah terisi data student yang didapatkan dari database.
+
+![edit](./assets/edit-form.png "add")
+
+### Validasi Data Add atau Edit 
+Halaman Add atau Edit akan menampilkan error dari data yang belum diisi (kosong).
+
+![edit](./assets/verif-form.png "add")
+
+Apabila berhasil menambahkan atau mengedit student maka halaman akan redirect ke home atau `/`
+
+## Release 6
 ### Delete Student atau Route `/students/delete/:id`
 Untuk mengimplementasikan routing ini, kamu tidak perlu membuat halaman baru, tapi cukup dengan menekan tombol delete yang akan mengarahkan routing ke `/students/delete/:id` dimana proses delete akan dilakukan berdasarkan `id` yang dikirimkan. 
 

@@ -42,7 +42,6 @@ class Model {
     static editStudent(id, cb) {
         const query = `SELECT * FROM "Students" WHERE "id" = $1`
         const values = [id]
-        console.log(values);
         pool.query(query, values, (err, res) => {
             if (err) {
                 cb(err, null)
@@ -59,7 +58,6 @@ class Model {
         } else {
             const query = `UPDATE "Students" SET "name" = $1, "phase" = $2, "likeMcd" = $3 WHERE "id" = $4`
             const values = [data.name, data.phase, data.likeMcd, id]
-            console.log(values);
             pool.query(query, values, (err, res) => {
                 if (err) {
                     cb(err, null)
