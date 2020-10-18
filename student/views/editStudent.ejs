@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Student</title>
+</head>
+<body>
+    <h1>Edit Student</h1>
+    <a href="/students">Back to list Students</a>
+    <% if (error) { %>
+        <p>Error! <%= error %></p>
+    <% } %> 
+    <form action="/students/edit/<%= student.id %>" method="post">
+        <label for="">Name</label><br>
+        <input type="text" name="name" placeholder="e.g AkbarHabiby" value="<%= student.name %>">
+        <br>
+        <br>
+        <label for="">Phase</label><br>
+        <select name="phase">
+            <option value="">-- Select Phase --</option>
+            <option value="0"<% if(student.phase == 0) {%> selected <%}%>>0</option>
+            <option value="1"<% if(student.phase == 1) {%> selected <%}%>>1</option>
+            <option value="2"<% if(student.phase == 2) {%> selected <%}%>>2</option>
+            <option value="3"<% if(student.phase == 3) {%> selected <%}%>>3</option>
+        </select>
+        <br>
+        <br>
+        <label for="">Like Mcd?</label><br>
+        <input type="radio" name="likeMcd" value="true"<% if(student.likeMcd == true) {%> checked <%}%>><span>True</span>
+        <input type="radio" name="likeMcd" value="false"<% if(student.likeMcd == false) {%> checked <%}%>><span>False</span>
+        <br>
+        <button type="submit">Add Student!</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student</title>
+</head>
+<body>
+    <h1>Add Student</h1>
+    <a href="/students">Back to list Students</a>
+    <% if (error) { %>
+        <p>Error! <%= error %></p>
+    <% } %> 
+    <form action="/students/add" method="post">
+        <label for="">Name:</label><br>
+        <input type="text" name="name" placeholder="e.g AkbarHabiby">
+        <br>
+        <label for="">Phase:</label><br>
+        <select name="phase">
+            <option value="">-- Select Phase --</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        <br>
+        <label for="">Like Mcd?</label><br>
+        <input type="radio" name="likeMcd" value="true"><span>True</span>
+        <input type="radio" name="likeMcd" value="false"><span>False</span>
+        <br>
+        <button type="submit">Add Student!</button>
+    </form>
+</body>
+</html>
